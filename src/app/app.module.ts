@@ -9,9 +9,17 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { BtcComponentsModule } from 'btc-components';
+
 @NgModule({
-  declarations: [AppComponent, HeroesComponent, HeroDetailComponent, MessagesComponent, DashboardComponent],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HeroesComponent,
+    HeroDetailComponent,
+    MessagesComponent,
+    DashboardComponent,
+  ],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, BtcComponentsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

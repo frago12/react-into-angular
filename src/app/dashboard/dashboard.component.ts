@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  AfterContentInit,
+} from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
@@ -7,13 +13,20 @@ import { HeroService } from '../hero.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterContentInit {
   heroes: Hero[] = [];
+
+  @ViewChild('myTitle', { static: true }) titleRef: ElementRef;
 
   constructor(private heroService: HeroService) {}
 
   ngOnInit() {
     this.getHeroes();
+  }
+
+  ngAfterContentInit() {
+    console.log('ngAfterContentInit');
+    console.log(this.titleRef.nativeElement);
   }
 
   getHeroes(): void {
