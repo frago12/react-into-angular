@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { BtcDesignSystemModule } from 'btc-design-system';
+
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
@@ -19,7 +21,12 @@ import { HeroItemComponent } from './ReactComponents/HeroItem.component';
     DashboardComponent,
     HeroItemComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    BtcDesignSystemModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

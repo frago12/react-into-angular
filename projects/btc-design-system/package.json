@@ -1,0 +1,21 @@
+{
+  "name": "btc-design-system",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "ng-packagr",
+    "build:watch": "ng-packagr --watch"
+  },
+  "peerDependencies": {
+    "@angular/common": "^9.1.1",
+    "@angular/core": "^9.1.1",
+    "tslib": "^1.10.0"
+  },
+  "dependencies": {
+    "@shopify/polaris": "^4.19.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "ng-packagr": "^9.1.1"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/btc-design-system",
+  "lib": {
+    "jsx": "react",
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "react": "React",
+      "react-dom": "ReactDOM",
+      "@shopify/polaris": "polaris"
+    }
+  },
+  "whitelistedNonPeerDependencies": ["@shopify/polaris", "react", "react-dom"]
+}
